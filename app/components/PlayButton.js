@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, TouchableOpacity, View } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
+import Spotify from "rn-spotify-sdk";
 
 class PlayButton extends Component {
   /**
@@ -28,6 +29,7 @@ class PlayButton extends Component {
     const toggle = !this.state.toggle;
     const toggleIcon = toggle ? "ios-pause" : "ios-play";
     this.setState({ toggle, toggleIcon });
+    Spotify.playURI("spotify:track:2zk7TQx9Xa4yxYmsjgDCPp", 0, 0);
   }
 
   render() {

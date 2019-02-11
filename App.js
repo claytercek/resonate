@@ -5,12 +5,34 @@ import { createBottomTabNavigator, createAppContainer } from "react-navigation";
 import Playlist from "./app/views/Playlist";
 import Player from "./app/views/Player";
 import { Colors } from "./app/styles/Colors";
-import RepoList from "./app/components/RepoList"
+import Spotify from "rn-spotify-sdk";
 
 /**
  * Some random pages for tab navigation demo
  */
 class Home extends Component {
+  componentDidMount() {
+    if(!Spotify.isInitialized()) {
+			// initialize spotify
+			var spotifyOptions = {
+				"clientID":"dcd8765def1247768928a9a0887e625e",
+				"sessionUserDefaultsKey":"SpotifySession",
+				"redirectURL":"resonate://auth",
+				"scopes":["user-read-private", "playlist-read", "playlist-read-private", "streaming"],
+			};
+			Spotify.initialize(spotifyOptions).then((loggedIn) => {
+				// update UI state
+				this.setState({spotifyInitialized: true});
+				// handle initialization
+				if(!loggedIn)
+				{
+					Spotify.login()
+				}
+			}).catch((error) => {
+				Alert.alert("Error", error.message);
+			});
+		}
+  }
 
   render() {
     return (
