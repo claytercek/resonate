@@ -1981,6 +1981,11 @@ eventemitter3@^3.0.0:
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-3.1.0.tgz#090b4d6cdbd645ed10bf750d4b5407942d7ba163"
   integrity sha512-ivIvhpq/Y0uSjcHDcOIccjmYjGLcP09MFGE7ysAwkAvkXfpZlC985pH2/ui64DKazbTW/4kN3yqozUxlXzI6cA==
 
+events@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/events/-/events-1.1.1.tgz#9ebdb7635ad099c70dcc4c2a1f5004288e8bd924"
+  integrity sha1-nr23Y1rQmccNzEwqH1AEKI6L2SQ=
+
 exec-sh@^0.2.0:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/exec-sh/-/exec-sh-0.2.2.tgz#2a5e7ffcbd7d0ba2755bdecb16e5a427dfbdec36"
@@ -4802,6 +4807,13 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-native-events@~1.0.10:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/react-native-events/-/react-native-events-1.0.12.tgz#a7c655ed73970a3df6108d1e9b1c0c31f7919efb"
+  integrity sha512-yZB8RnW6JY7vHK/AgHLNKynG9fdB6k0JwNqZ1Ad2c2kf3e+Nf/vBdurFEZOjuTyXofeeem246Fmo7Rm7FGIonw==
+  dependencies:
+    events "^1.1.1"
+
 react-native-gesture-handler@^1.0.0:
   version "1.0.15"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.0.15.tgz#7e0d0a457820a3c9325a3d492daaed14400508a6"
@@ -5288,6 +5300,13 @@ rimraf@~2.2.6:
   version "2.2.8"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
   integrity sha1-5Dm+Kq7jJzIZUnMPmaiSnk/FBYI=
+
+rn-spotify-sdk@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/rn-spotify-sdk/-/rn-spotify-sdk-1.1.13.tgz#e0caadb1b1e5f4906f42dab51972eed625b0daba"
+  integrity sha512-FM0VthxvgWBnNxxHwwlzRnhafVck8izLIIhSig4qPxwJVS2bPEZiPt87lhF61QvIZXTl4LZTwv5q07fVc7mlbA==
+  dependencies:
+    react-native-events "~1.0.10"
 
 rsvp@^3.3.3:
   version "3.6.2"
