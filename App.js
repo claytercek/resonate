@@ -37,7 +37,6 @@ class Home extends Component {
   render() {
     return (
         <View>
-          {/* <RepoList /> */}
         </View>
     );
   }
