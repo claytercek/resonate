@@ -9,27 +9,7 @@ class Tag extends Component {
     selectedTags: []
   }
 
-  onChoose = () => {
-    console.log(this.state.background)
-    if (this.state.isChosen) {
-      Animated.timing(this.state.background, {
-        toValue: "#312F2F"
-        
-      }).start()
-    } else {
-      Animated.timing(this.state.background, {
-        toValue: "white",
-      
-      }).start()
-
-    }
-    this.setState({isChosen: !this.state.isChosen})
-  }
-
   render() {
-    const backgroundStyle = {
-      backgroundColor: this.state.background
-    }
     return (
       <View style={[styles.tagContainer, this.props.style]}>
         {this.props.tagData.map((item, index) => {
